@@ -25,9 +25,6 @@ const DetailProduct = () => {
 
   // Không return null - để animation có thời gian chạy
   if (!selectedProduct && !isVisible) return null;
-
-  console.log("Sản phẩm được chọn: ", selectedProduct);
-
   return (
     <AnimatePresence>
       {isVisible && selectedProduct && (
@@ -45,7 +42,7 @@ const DetailProduct = () => {
           {/* Modal */}
           <motion.div
             initial={{ opacity: 0, y: -100 }}
-            animate={{ opacity: 1, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -100 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
             onClick={(e) => e.stopPropagation()}
@@ -64,36 +61,35 @@ const DetailProduct = () => {
               </button>
 
               <div className='flex flex-col p-6'>
-                <div className='flex flex-col md:flex-row justify-center mt-4 items-center md:items-start gap-8'>
+                <div className='flex flex-col md:flex-row justify-center mt-6 items-center md:items-start gap-12'>
                   {/* Left Image */}
-                  <div className='relative w-full max-w-md'>
-                    <div className='absolute -inset-1 bg-linear-to-r from-primary/10 to-secondary/10 rounded-xl blur opacity-60'></div>
+                  <div className='relative w-full max-w-sm shrink-0'>
+                    <div className='absolute -inset-1 bg-linear-to-r from-primary/20 to-secondary/20 rounded-2xl blur-lg opacity-70'></div>
                     <Image
                       src={selectedProduct?.image || "/placeholder-image.png"}
                       alt={selectedProduct?.name || "image"}
-                      width={300}
-                      height={300}
-                      className='relative rounded-lg object-cover border border-border shadow-inner'
+                      width={400}
+                      height={400}
+                      className='relative rounded-2xl object-cover border border-primary/20 shadow-lg'
+                      priority
                     />
                   </div>
 
                   {/* Information Product */}
-                  <div className='flex flex-col space-y-4'>
-                    <div>
-                      <span className='text-3xl font-bold text-foreground'>
+                  <div className='flex flex-col space-y-6 flex-1'>
+                    <div className='space-y-3'>
+                      <h1 className='text-4xl md:text-5xl font-bold text-foreground leading-tight'>
                         {selectedProduct?.name}
-                      </span>
-                      <div className='mt-2'>
-                        <span className='text-2xl font-bold text-primary'>
-                          {selectedProduct?.price.toLocaleString("vi-VN")} đ
-                        </span>
-                      </div>
+                      </h1>
+                      <p className='text-3xl font-bold text-transparent bg-clip-text bg-linear-to-r from-primary to-secondary'>
+                        {selectedProduct?.price.toLocaleString("vi-VN")} đ
+                      </p>
                     </div>
 
-                    <div className='mt-2'>
-                      <span className='text-lg text-muted-foreground leading-relaxed'>
+                    <div className='border-t border-primary/10 pt-6'>
+                      <p className='text-base text-muted-foreground leading-relaxed'>
                         {selectedProduct?.description}
-                      </span>
+                      </p>
                     </div>
                   </div>
                 </div>
