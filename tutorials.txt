@@ -1,0 +1,23 @@
+==========================================================
+🚀 CẨM NANG LỆNH BACKEND (BE) - CYPHER SHOP
+==========================================================
+
+1. KHỞI ĐỘNG HỆ THỐNG
+   - Bật Database (MongoDB): docker-compose up -d
+   - Tắt Database: docker-compose down
+
+2. DATABASE & PRISMA (Sử dụng khi sửa file schema.prisma)
+   - Đồng bộ cấu trúc vào DB: pnpm exec prisma db push
+   - Xem dữ liệu trực quan: pnpm exec prisma studio
+   - RESET TOÀN BỘ (Mới): pnpm exec prisma db push --force-reset (Dùng khi muốn đập đi xây lại, xóa sạch dữ liệu và các bảng đã bỏ để DB sạch 100%)
+   - Tạo lại Prisma Client: pnpm exec prisma generate
+
+3. CHẠY SERVER ĐỂ CODE
+   - Chạy Server (Auto-reload): pnpm run start:dev
+
+4. QUẢN LÝ MODULE & THƯ VIỆN
+   - Tạo nhanh Module mới: nest g resource <tên_module>
+   - Cài thư viện mới: pnpm add <tên_thư_viện>
+
+⚠️ LƯU Ý: Luôn mở Terminal tại thư mục 'backend' trước khi gõ lệnh.
+==========================================================

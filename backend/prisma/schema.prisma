@@ -1,0 +1,126 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// 1. Định nghĩa Quyền hạn (Enum)
+enum Role {
+  CUSTOMER
+  STAFF
+  ADMIN
+}
+
+// 2. Model Người dùng
+model User {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  clerkId     String?  @unique
+  email       String   @unique
+  firstName   String
+  lastName    String
+  password    String?
+  phoneNumber String?
+  role        Role     @default(CUSTOMER)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("users")
+}
+
+// 3. Model Danh mục
+model Category {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  name     String  @unique
+  slug     String  @unique
+  isActive Boolean @default(true)
+
+  // Quan hệ Cha - Con (Self-relation)
+  parentId String?    @db.ObjectId
+  parent   Category?  @relation("SubCategories", fields: [parentId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  children Category[] @relation("SubCategories")
+
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  products  Product[]
+
+  @@map("categories")
+}
+
+// 4. Model Sản phẩm
+model Product {
+  id              String           @id @default(auto()) @map("_id") @db.ObjectId
+  name            String           @unique
+  slug            String           @unique
+  description     String?
+  price           Float
+  isActive        Boolean          @default(true)
+  categoryId      String           @db.ObjectId
+  category        Category         @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  productSizes    ProductSize[] // Liên kết với ProductSize
+  productToppings ProductTopping[] // Liên kết với ProductTopping
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("products")
+}
+
+// 5. Model Size
+model Size {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  name     String  @unique
+  price    Float
+  isActive Boolean @default(true)
+
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  productSizes ProductSize[]
+
+  @@map("sizes")
+}
+
+// 6. Model ProductSize (Bảng trung gian)
+model ProductSize {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  productId String  @db.ObjectId
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  sizeId    String  @db.ObjectId
+  size      Size    @relation(fields: [sizeId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("product_sizes")
+}
+
+// 7. Model Topping
+model Topping {
+  id       String  @id @default(auto()) @map("_id") @db.ObjectId
+  name     String  @unique
+  price    Float
+  isActive Boolean @default(true)
+
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  productToppings ProductTopping[]
+
+  @@map("toppings")
+}
+
+// 8. Model ProductTopping (Bảng trung gian)
+model ProductTopping {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  productId String  @db.ObjectId
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  toppingId String  @db.ObjectId
+  topping   Topping @relation(fields: [toppingId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("product_toppings")
+}
