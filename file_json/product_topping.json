@@ -1,0 +1,392 @@
+[
+    // Cappucino Đá + Toppings
+    {
+        "productId": "69504afe4a4a955d432da618",
+        "toppingId": "695055bd775153b036592161"
+    },
+    {
+        "productId": "69504afe4a4a955d432da618",
+        "toppingId": "695055c3775153b036592162"
+    },
+    {
+        "productId": "69504afe4a4a955d432da618",
+        "toppingId": "695055ca775153b036592163"
+    },
+    {
+        "productId": "69504afe4a4a955d432da618",
+        "toppingId": "695055de775153b036592164"
+    },
+    {
+        "productId": "69504afe4a4a955d432da618",
+        "toppingId": "695055e8775153b036592165"
+    },
+    {
+        "productId": "69504afe4a4a955d432da618",
+        "toppingId": "695055ef775153b036592166"
+    },
+    {
+        "productId": "69504afe4a4a955d432da618",
+        "toppingId": "695055f6775153b036592167"
+    },
+    {
+        "productId": "69504afe4a4a955d432da618",
+        "toppingId": "69505605775153b036592168"
+    },
+    {
+        "productId": "69504afe4a4a955d432da618",
+        "toppingId": "6950560e775153b036592169"
+    },
+    {
+        "productId": "69504afe4a4a955d432da618",
+        "toppingId": "69505615775153b03659216a"
+    },
+    {
+        "productId": "69504afe4a4a955d432da618",
+        "toppingId": "6950561a775153b03659216b"
+    },
+    {
+        "productId": "69504afe4a4a955d432da618",
+        "toppingId": "69505623775153b03659216c"
+    },
+    {
+        "productId": "69504afe4a4a955d432da618",
+        "toppingId": "69505627775153b03659216d"
+    },
+    {
+        "productId": "69504afe4a4a955d432da618",
+        "toppingId": "69505631775153b03659216e"
+    },
+    {
+        "productId": "69504afe4a4a955d432da618",
+        "toppingId": "69505635775153b03659216f"
+    },
+    {
+        "productId": "69504afe4a4a955d432da618",
+        "toppingId": "6950563f775153b036592170"
+    },
+    // Cappucino Nóng + Toppings
+    {
+        "productId": "69504b124a4a955d432da619",
+        "toppingId": "695055bd775153b036592161"
+    },
+    {
+        "productId": "69504b124a4a955d432da619",
+        "toppingId": "695055c3775153b036592162"
+    },
+    {
+        "productId": "69504b124a4a955d432da619",
+        "toppingId": "695055ca775153b036592163"
+    },
+    {
+        "productId": "69504b124a4a955d432da619",
+        "toppingId": "695055de775153b036592164"
+    },
+    {
+        "productId": "69504b124a4a955d432da619",
+        "toppingId": "695055e8775153b036592165"
+    },
+    {
+        "productId": "69504b124a4a955d432da619",
+        "toppingId": "695055ef775153b036592166"
+    },
+    {
+        "productId": "69504b124a4a955d432da619",
+        "toppingId": "695055f6775153b036592167"
+    },
+    {
+        "productId": "69504b124a4a955d432da619",
+        "toppingId": "69505605775153b036592168"
+    },
+    {
+        "productId": "69504b124a4a955d432da619",
+        "toppingId": "6950560e775153b036592169"
+    },
+    {
+        "productId": "69504b124a4a955d432da619",
+        "toppingId": "69505615775153b03659216a"
+    },
+    {
+        "productId": "69504b124a4a955d432da619",
+        "toppingId": "6950561a775153b03659216b"
+    },
+    {
+        "productId": "69504b124a4a955d432da619",
+        "toppingId": "69505623775153b03659216c"
+    },
+    {
+        "productId": "69504b124a4a955d432da619",
+        "toppingId": "69505627775153b03659216d"
+    },
+    {
+        "productId": "69504b124a4a955d432da619",
+        "toppingId": "69505631775153b03659216e"
+    },
+    {
+        "productId": "69504b124a4a955d432da619",
+        "toppingId": "69505635775153b03659216f"
+    },
+    {
+        "productId": "69504b124a4a955d432da619",
+        "toppingId": "6950563f775153b036592170"
+    },
+    // Caramel Macchiato Đá + Toppings
+    {
+        "productId": "69504b364a4a955d432da61a",
+        "toppingId": "695055bd775153b036592161"
+    },
+    {
+        "productId": "69504b364a4a955d432da61a",
+        "toppingId": "695055c3775153b036592162"
+    },
+    {
+        "productId": "69504b364a4a955d432da61a",
+        "toppingId": "695055ca775153b036592163"
+    },
+    {
+        "productId": "69504b364a4a955d432da61a",
+        "toppingId": "695055de775153b036592164"
+    },
+    {
+        "productId": "69504b364a4a955d432da61a",
+        "toppingId": "695055e8775153b036592165"
+    },
+    {
+        "productId": "69504b364a4a955d432da61a",
+        "toppingId": "695055ef775153b036592166"
+    },
+    {
+        "productId": "69504b364a4a955d432da61a",
+        "toppingId": "695055f6775153b036592167"
+    },
+    {
+        "productId": "69504b364a4a955d432da61a",
+        "toppingId": "69505605775153b036592168"
+    },
+    {
+        "productId": "69504b364a4a955d432da61a",
+        "toppingId": "6950560e775153b036592169"
+    },
+    {
+        "productId": "69504b364a4a955d432da61a",
+        "toppingId": "69505615775153b03659216a"
+    },
+    {
+        "productId": "69504b364a4a955d432da61a",
+        "toppingId": "6950561a775153b03659216b"
+    },
+    {
+        "productId": "69504b364a4a955d432da61a",
+        "toppingId": "69505623775153b03659216c"
+    },
+    {
+        "productId": "69504b364a4a955d432da61a",
+        "toppingId": "69505627775153b03659216d"
+    },
+    {
+        "productId": "69504b364a4a955d432da61a",
+        "toppingId": "69505631775153b03659216e"
+    },
+    {
+        "productId": "69504b364a4a955d432da61a",
+        "toppingId": "69505635775153b03659216f"
+    },
+    {
+        "productId": "69504b364a4a955d432da61a",
+        "toppingId": "6950563f775153b036592170"
+    },
+    // Caramel Macchiato Nóng + Toppings
+    {
+        "productId": "69504b534a4a955d432da61b",
+        "toppingId": "695055bd775153b036592161"
+    },
+    {
+        "productId": "69504b534a4a955d432da61b",
+        "toppingId": "695055c3775153b036592162"
+    },
+    {
+        "productId": "69504b534a4a955d432da61b",
+        "toppingId": "695055ca775153b036592163"
+    },
+    {
+        "productId": "69504b534a4a955d432da61b",
+        "toppingId": "695055de775153b036592164"
+    },
+    {
+        "productId": "69504b534a4a955d432da61b",
+        "toppingId": "695055e8775153b036592165"
+    },
+    {
+        "productId": "69504b534a4a955d432da61b",
+        "toppingId": "695055ef775153b036592166"
+    },
+    {
+        "productId": "69504b534a4a955d432da61b",
+        "toppingId": "695055f6775153b036592167"
+    },
+    {
+        "productId": "69504b534a4a955d432da61b",
+        "toppingId": "69505605775153b036592168"
+    },
+    {
+        "productId": "69504b534a4a955d432da61b",
+        "toppingId": "6950560e775153b036592169"
+    },
+    {
+        "productId": "69504b534a4a955d432da61b",
+        "toppingId": "69505615775153b03659216a"
+    },
+    {
+        "productId": "69504b534a4a955d432da61b",
+        "toppingId": "6950561a775153b03659216b"
+    },
+    {
+        "productId": "69504b534a4a955d432da61b",
+        "toppingId": "69505623775153b03659216c"
+    },
+    {
+        "productId": "69504b534a4a955d432da61b",
+        "toppingId": "69505627775153b03659216d"
+    },
+    {
+        "productId": "69504b534a4a955d432da61b",
+        "toppingId": "69505631775153b03659216e"
+    },
+    {
+        "productId": "69504b534a4a955d432da61b",
+        "toppingId": "69505635775153b03659216f"
+    },
+    {
+        "productId": "69504b534a4a955d432da61b",
+        "toppingId": "6950563f775153b036592170"
+    },
+    // Americano Nóng + Toppings
+    {
+        "productId": "69504b764a4a955d432da61c",
+        "toppingId": "695055bd775153b036592161"
+    },
+    {
+        "productId": "69504b764a4a955d432da61c",
+        "toppingId": "695055c3775153b036592162"
+    },
+    {
+        "productId": "69504b764a4a955d432da61c",
+        "toppingId": "695055ca775153b036592163"
+    },
+    {
+        "productId": "69504b764a4a955d432da61c",
+        "toppingId": "695055de775153b036592164"
+    },
+    {
+        "productId": "69504b764a4a955d432da61c",
+        "toppingId": "695055e8775153b036592165"
+    },
+    {
+        "productId": "69504b764a4a955d432da61c",
+        "toppingId": "695055ef775153b036592166"
+    },
+    {
+        "productId": "69504b764a4a955d432da61c",
+        "toppingId": "695055f6775153b036592167"
+    },
+    {
+        "productId": "69504b764a4a955d432da61c",
+        "toppingId": "69505605775153b036592168"
+    },
+    {
+        "productId": "69504b764a4a955d432da61c",
+        "toppingId": "6950560e775153b036592169"
+    },
+    {
+        "productId": "69504b764a4a955d432da61c",
+        "toppingId": "69505615775153b03659216a"
+    },
+    {
+        "productId": "69504b764a4a955d432da61c",
+        "toppingId": "6950561a775153b03659216b"
+    },
+    {
+        "productId": "69504b764a4a955d432da61c",
+        "toppingId": "69505623775153b03659216c"
+    },
+    {
+        "productId": "69504b764a4a955d432da61c",
+        "toppingId": "69505627775153b03659216d"
+    },
+    {
+        "productId": "69504b764a4a955d432da61c",
+        "toppingId": "69505631775153b03659216e"
+    },
+    {
+        "productId": "69504b764a4a955d432da61c",
+        "toppingId": "69505635775153b03659216f"
+    },
+    {
+        "productId": "69504b764a4a955d432da61c",
+        "toppingId": "6950563f775153b036592170"
+    },
+    // Latte Nóng + Toppings
+    {
+        "productId": "69504b914a4a955d432da61d",
+        "toppingId": "695055bd775153b036592161"
+    },
+    {
+        "productId": "69504b914a4a955d432da61d",
+        "toppingId": "695055c3775153b036592162"
+    },
+    {
+        "productId": "69504b914a4a955d432da61d",
+        "toppingId": "695055ca775153b036592163"
+    },
+    {
+        "productId": "69504b914a4a955d432da61d",
+        "toppingId": "695055de775153b036592164"
+    },
+    {
+        "productId": "69504b914a4a955d432da61d",
+        "toppingId": "695055e8775153b036592165"
+    },
+    {
+        "productId": "69504b914a4a955d432da61d",
+        "toppingId": "695055ef775153b036592166"
+    },
+    {
+        "productId": "69504b914a4a955d432da61d",
+        "toppingId": "695055f6775153b036592167"
+    },
+    {
+        "productId": "69504b914a4a955d432da61d",
+        "toppingId": "69505605775153b036592168"
+    },
+    {
+        "productId": "69504b914a4a955d432da61d",
+        "toppingId": "6950560e775153b036592169"
+    },
+    {
+        "productId": "69504b914a4a955d432da61d",
+        "toppingId": "69505615775153b03659216a"
+    },
+    {
+        "productId": "69504b914a4a955d432da61d",
+        "toppingId": "6950561a775153b03659216b"
+    },
+    {
+        "productId": "69504b914a4a955d432da61d",
+        "toppingId": "69505623775153b03659216c"
+    },
+    {
+        "productId": "69504b914a4a955d432da61d",
+        "toppingId": "69505627775153b03659216d"
+    },
+    {
+        "productId": "69504b914a4a955d432da61d",
+        "toppingId": "69505631775153b03659216e"
+    },
+    {
+        "productId": "69504b914a4a955d432da61d",
+        "toppingId": "69505635775153b03659216f"
+    },
+    {
+        "productId": "69504b914a4a955d432da61d",
+        "toppingId": "6950563f775153b036592170"
+    }
+]

@@ -8,7 +8,9 @@ import ProfileButton from "./ProfileButton";
 import { toast } from "sonner";
 import { useEffect } from "react";
 import SearchBar from "./SearchBar";
+import { Category } from "../types/category";
 import { ShoppingCart } from "lucide-react";
+import { CategoryHook } from "../hooks/CategoryHook";
 
 interface NavbarProps {
   onOpenCart: () => void;
@@ -16,9 +18,13 @@ interface NavbarProps {
 }
 
 const Navbar = ({ onOpenCart, onCloseCart }: NavbarProps) => {
+  const {
+    categories,
+  } = CategoryHook();
   const { user, isLoaded } = useUser();
   const { openSignIn } = useClerk();
   const router = useRouter();
+
 
   useEffect(() => {
     if (!isLoaded) return;
@@ -41,8 +47,21 @@ const Navbar = ({ onOpenCart, onCloseCart }: NavbarProps) => {
     }
   }, [user, isLoaded]);
 
-  const handleCategoryClick = (category: string, child: string) => {
-    router.push(`/?category=${category}&child=${child}`, { scroll: false });
+  const handleCategoryClick = (
+    parentCategory: Category,
+    childCategory?: Category
+  ) => {
+    // Nếu không chỉ định child, lấy child đầu tiên
+    const selectedChild = childCategory || parentCategory.children?.[0];
+
+    if (selectedChild) {
+      router.push(
+        `/?category=${parentCategory.slug}&child=${selectedChild.slug}`,
+        { scroll: false }
+      );
+    } else {
+      router.push(`/?category=${parentCategory.slug}`, { scroll: false });
+    }
   };
 
   return (
@@ -67,24 +86,15 @@ const Navbar = ({ onOpenCart, onCloseCart }: NavbarProps) => {
 
       {/* Center Navigation */}
       <div className='hidden md:flex items-center justify-center gap-6'>
-        <button
-          onClick={() => handleCategoryClick("ca-phe", "espresso")}
-          className='text-sm font-medium text-foreground hover:text-primary transition-colors px-2 py-1 rounded cursor-pointer'
-        >
-          Cà Phê
-        </button>
-        <button
-          onClick={() => handleCategoryClick("tra", "matcha-tay-bac")}
-          className='text-sm font-medium text-foreground hover:text-primary transition-colors px-2 py-1 rounded cursor-pointer'
-        >
-          Trà
-        </button>
-        <button
-          onClick={() => handleCategoryClick("do-an", "banh-ngot")}
-          className='text-sm font-medium text-foreground hover:text-primary transition-colors px-2 py-1 rounded cursor-pointer'
-        >
-          Đồ Ăn
-        </button>
+        {categories.map((category) => (
+          <button
+            key={category.id}
+            onClick={() => handleCategoryClick(category)} // Chỉ truyền parent
+            className='text-sm font-medium text-foreground hover:text-primary transition-colors px-2 py-1 rounded cursor-pointer'
+          >
+            {category.name}
+          </button>
+        ))}
       </div>
 
       {/* Right Section */}

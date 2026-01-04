@@ -1,22 +1,24 @@
 "use client";
-import type { CategoryListProps } from "@/app/types/category";
+import type { CategoryListComponentProps } from "@/app/types/category";
 
 const CategoryList = ({
-  parentCategory,
-  childCategories,
+  parentCategory,   // Nhận vào object
   selectedChild,
   onChildClick,
-}: CategoryListProps) => {
+}: CategoryListComponentProps) => {
+  
+  if (!parentCategory) return null;
+
   return (
     <div className='sticky top-24'>
       {/* Tên danh mục cha */}
       <h2 className='text-2xl font-bold text-primary mb-4 uppercase border-l-4 border-primary pl-3'>
-        {parentCategory.name}
+        {parentCategory.name} 
       </h2>
 
       {/* List danh mục con */}
       <ul className='space-y-2'>
-        {childCategories.map((child) => {
+        {parentCategory.children?.map((child) => {
           const isActive = selectedChild === child.slug;
           return (
             <li key={child.id}>

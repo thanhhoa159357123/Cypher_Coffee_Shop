@@ -55,8 +55,9 @@ model Product {
   id              String           @id @default(auto()) @map("_id") @db.ObjectId
   name            String           @unique
   slug            String           @unique
-  description     String?
+  description     String
   price           Float
+  imageUrl        String?
   isActive        Boolean          @default(true)
   categoryId      String           @db.ObjectId
   category        Category         @relation(fields: [categoryId], references: [id], onDelete: Cascade)

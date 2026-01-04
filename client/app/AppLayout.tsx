@@ -16,6 +16,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       <Cart
         isOpen={isCartOpen}
         onClose={() => setIsCartOpen(false)}
+        
       />
       {children}
     </div>
